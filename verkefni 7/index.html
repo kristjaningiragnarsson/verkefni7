@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<main>
+<div id='one' >Jón</div>
+<div id='two'>Gunnar</div>
+<div id='three'>Karen</div>
+
+<script>
+//1 Notaðu replace() aðferðina til að breyta textanum Gunnar í Jakob (1%)
+var itemTwo = document.getElementById('two');
+
+var elText  = itemTwo.firstChild.nodeValue;
+
+elText = elText.replace('Gunnar', 'Jakob'); 
+
+itemTwo.firstChild.nodeValue = elText; 
+//2. Bættu við class eigindið með heitinu active við div element sem geymir Jón með JavaScript (0.5%)
+var firstItem = document.getElementById('one');
+var itemContent = firstItem.innerHTML;
+firstItem.innerHTML = '<active>' + itemContent + '</active>';
+//3. Fjarlægðu html elementið sem geymir Karen með JavaScript (1%)
+var removeEl = document.getElementsByTagName('div')[2];
+
+var containerEl = removeEl.parentNode; 
+
+containerEl.removeChild(removeEl); 
+//4. Hver er munurinn á að nota innerHtml() og DOM Manipulation ( t.d. createElement,createTextNode, appendChild)? (0.5%)
+//Dom Manipulation er betra fyrir individual noeds meðan innerhtml er betri fyrir updatea entire fragments
+
+
+ 
+</script>
+</main>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
